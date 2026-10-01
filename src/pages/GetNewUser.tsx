@@ -83,7 +83,7 @@ const GetNewUser = (props: any) => {
                                 <img
                                     src={
                                         row?.image
-                                            ? `${row.image}${row?.image?.includes('googleusercontent') ? '?s96' : ''}`
+                                            ? `${imageUrl}${row?.image?.includes('googleusercontent') ? '?s96' : ''}`
                                             : `${basePath}/images/male.png`
                                     }
                                     alt="Image"
