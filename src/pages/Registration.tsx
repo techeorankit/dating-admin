@@ -1,6 +1,6 @@
-import { basePath } from "@/utils/config";
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { basePath } from "@/utils/config";
 import React, { useState } from "react";
 // import { useSelector } from "react-redux";
 import { Textarea } from "../extra/Input";
