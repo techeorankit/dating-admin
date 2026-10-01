@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import GiftCategoryDialog from "@/component/giftCategory/GiftCategoryDialog";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
@@ -188,7 +189,7 @@ const GiftCategory = () => {
             {can("Gift Category", "Create") && (
               <Button
                 className={`bg-button p-10 text-white `}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Gift Category"
                 onClick={() => {
                   dispatch(openDialog({ type: "giftCategory" }));

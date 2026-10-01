@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Button from "@/extra/Button";
 import { ExInput, Textarea } from "@/extra/Input";
 import { closeDialog } from "@/store/dialogSlice";
@@ -915,7 +916,7 @@ const AgencyDialog = () => {
                                                     }}
                                                     onError={(e: any) => {
                                                         e.target.onerror = null;
-                                                        e.target.src = `/images/male.png`;
+                                                        e.target.src = `${basePath}/images/male.png`;
                                                     }}
                                                 />
                                             </>

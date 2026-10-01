@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import React, { useEffect } from "react";
 import RootLayout from "../component/layout/Layout";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
@@ -79,7 +80,7 @@ const UserInfo = () => {
                     alt=""
                     onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/male.png`;
+                      e.target.src = `${basePath}/images/male.png`;
                     }}
                   />
                 )}
@@ -210,7 +211,7 @@ const UserInfo = () => {
                               src={getImageUrl(url)}
                               onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/noImg.png`;
+                      e.target.src = `${basePath}/images/noImg.png`;
                     }}
                               style={{
                                 height: "70px",
@@ -241,7 +242,7 @@ const UserInfo = () => {
                               }
                               onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/noImg.png`;
+                      e.target.src = `${basePath}/images/noImg.png`;
                     }}
                               className="img-fluid"
                               width={240}

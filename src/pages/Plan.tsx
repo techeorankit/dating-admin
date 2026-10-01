@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 // import AddDoctor from "@/component/doctor/AddDoctor";
 // import AllDoctor from "@/component/doctor/AllDoctor";
 // import PendingRequest from "@/component/doctor/PendingRequest";
@@ -110,7 +111,7 @@ const Plan = () => {
               {can("Plan", "Create") && (
                 <Button
                   className={`bg-button p-10 text-white `}
-                  bIcon={`/images/bannerImage.png`}
+                  bIcon={`${basePath}/images/bannerImage.png`}
                   text="Add Coin Plan"
                   onClick={() => {
                     dispatch(openDialog({ type: "coinplan" }));
@@ -123,7 +124,7 @@ const Plan = () => {
               {can("Plan", "Create") && (
                 <Button
                   className={`bg-button p-10 text-white `}
-                  bIcon={`/images/bannerImage.png`}
+                  bIcon={`${basePath}/images/bannerImage.png`}
                   text="Add Vip Plan"
                   onClick={() => {
                     dispatch(openDialog({ type: "vipPlan" }));

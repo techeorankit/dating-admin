@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import image from "@/assets/images/bannerImage.png";
@@ -125,7 +126,7 @@ const VipPlan = ({ type }: any) => {
                 >
                     <div style={{ width: "30px" }}>
                         <img
-                            src="/images/coin.webp"
+                            src={`${basePath}/images/coin.webp`}
                             height={20}
                             width={20}
                         />

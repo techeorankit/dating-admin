@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import image from "@/assets/images/bannerImage.png";
@@ -99,7 +100,7 @@ const DailyCheckInReward = () => {
             Header: "Daily Reward Coin",
             Cell: ({ row }: { row: any }) => (
                 <div className="d-flex align-items-center justify-content-center gap-2">
-                    <img src="/images/coin.webp" alt="Coin" height={20} width={20} />
+                    <img src={`${basePath}/images/coin.webp`} alt="Coin" height={20} width={20} />
                     <span>{row?.dailyRewardCoin}</span>
                 </div>
             ),
@@ -216,7 +217,7 @@ const DailyCheckInReward = () => {
                         {canCreateDailyReward && (
                             <Button
                                 className="bg-button p-10 text-white"
-                                bIcon={`/images/bannerImage.png`}
+                                bIcon={`${basePath}/images/bannerImage.png`}
                                 text="Add Daily Reward"
                                 onClick={() => {
                                     dispatch(openDialog({ type: "dailycheckinreward" }));

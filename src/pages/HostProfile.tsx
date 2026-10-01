@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import React, { useEffect, useState } from "react";
 import RootLayout from "../component/layout/Layout";
 import Title from "@/extra/Title";
@@ -147,7 +148,7 @@ const HostProfile = () => {
                     }}
                     onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/male.png`;
+                      e.target.src = `${basePath}/images/male.png`;
                     }}
                     alt=""
                   />
@@ -525,7 +526,7 @@ const HostProfile = () => {
                                   width={200}
                                   onError={(e: any) => {
                                     e.target.onerror = null;
-                                    e.target.src = `/images/noImg.png`;
+                                    e.target.src = `${basePath}/images/noImg.png`;
                                   }}
                                   onClick={() => setSelectedImage(baseURL + url)}
                                 />
@@ -562,12 +563,12 @@ const HostProfile = () => {
                                 alt=""
                                 onClick={() =>
                                   setSelectedImage(
-                                    hostData?.image ? baseURL + url : `/images/male.png`
+                                    hostData?.image ? baseURL + url : `${basePath}/images/male.png`
                                   )
                                 }
                                 onError={(e: any) => {
                                   e.target.onerror = null;
-                                  e.target.src = `/images/noImg.png`;
+                                  e.target.src = `${basePath}/images/noImg.png`;
                                 }}
                               />
                             </div>

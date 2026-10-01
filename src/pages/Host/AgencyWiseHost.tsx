@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Analytics from "@/extra/Analytic";
 import Pagination from "@/extra/Pagination";
@@ -234,7 +235,7 @@ const AgencyWiseHost = () => {
                   ) => {
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = `/images/male.png`;
+                    target.src = `${basePath}/images/male.png`;
                   }}
                 />
               </div>
@@ -342,7 +343,7 @@ const AgencyWiseHost = () => {
                   }}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/india.png`;
+                    e.target.src = `${basePath}/images/india.png`;
                   }}
                 />
               </div>

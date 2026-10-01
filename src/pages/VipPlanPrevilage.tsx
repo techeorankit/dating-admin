@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import Title from "@/extra/Title";
@@ -63,32 +64,32 @@ const VipPlanPrevilage = ({ type }: any) => {
         {
             title: "VIP Frame Badge",
             value: "Frame",
-            icon: "/images/vipFrame.png",
+            icon: `${basePath}/images/vipFrame.png`,
         },
         {
             title: "Audio Call Discount",
             value: vipPlanBenefits?.audioCallDiscount,
-            icon: "/images/audiocall_discount.svg",
+            icon: `${basePath}/images/audiocall_discount.svg`,
         },
         {
             title: "Video Call Discount",
             value: vipPlanBenefits?.videoCallDiscount,
-            icon: "/images/videocall_discount.svg",
+            icon: `${basePath}/images/videocall_discount.svg`,
         },
         {
             title: "Random Match Discount.",
             value: vipPlanBenefits?.randomMatchCallDiscount,
-            icon: "/images/random_match.svg",
+            icon: `${basePath}/images/random_match.svg`,
         },
         {
             title: "TopUp Coin Bonus",
             value: vipPlanBenefits?.topUpCoinBonus,
-            icon: "/images/topcoin_bonus.svg",
+            icon: `${basePath}/images/topcoin_bonus.svg`,
         },
         {
             title: "Free Messages",
             value: vipPlanBenefits?.freeMessages,
-            icon: "/images/message.svg",
+            icon: `${basePath}/images/message.svg`,
         },
     ];
 
@@ -102,7 +103,7 @@ const VipPlanPrevilage = ({ type }: any) => {
                         {can("Vip Plan Benefits", "Edit") && (
                             <Button
                                 className="bg-button p-10 text-white"
-                                bIcon="/images/bannerImage.png"
+                                bIcon={`${basePath}/images/bannerImage.png`}
                                 text="Edit"
                                 onClick={() => {
                                     

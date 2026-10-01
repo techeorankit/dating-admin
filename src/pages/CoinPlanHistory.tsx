@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { RootStore } from "@/store/store";
@@ -122,10 +123,10 @@ const CoinPlanHistory = (props: any) => {
             <div className="d-flex px-2 py-1">
               <div>
                 <img
-                  src={getImageUrl(queryType === "host" ? row?.senderImage : row?.receiverImage) || "/images/male.png"}
+                  src={getImageUrl(queryType === "host" ? row?.senderImage : row?.receiverImage) || `${basePath}/images/male.png`}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = '/images/male.png';
+                    e.target.src = `${basePath}/images/male.png`;
                   }}
                   alt="Image"
                   loading="eager"
@@ -230,7 +231,7 @@ const CoinPlanHistory = (props: any) => {
           return (
             <div style={{ display: "flex", justifyContent: "center", gap: "6px" }}>
               <img
-                src="/images/coin.webp"
+                src={`${basePath}/images/coin.webp`}
                 alt="coin"
                 width={20}
                 height={20}
@@ -259,7 +260,7 @@ const CoinPlanHistory = (props: any) => {
 
             <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
               <img
-                src="/images/coin.webp"
+                src={`${basePath}/images/coin.webp`}
                 alt="coin"
                 width={20}
                 height={20}
@@ -286,7 +287,7 @@ const CoinPlanHistory = (props: any) => {
           return (
             <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
               <img
-                src="/images/coin.webp"
+                src={`${basePath}/images/coin.webp`}
                 alt="coin"
                 width={20}
                 height={20}
@@ -321,7 +322,7 @@ const CoinPlanHistory = (props: any) => {
           return (
             <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
               <img
-                src="/images/coin.webp"
+                src={`${basePath}/images/coin.webp`}
                 alt="coin"
                 width={20}
                 height={20}
@@ -345,7 +346,7 @@ const CoinPlanHistory = (props: any) => {
       Cell: ({ row }: { row: any }) => (
         <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
           <img
-            src="/images/coin.webp"
+            src={`${basePath}/images/coin.webp`}
             alt="coin"
             width={20}
             height={20}
@@ -363,7 +364,7 @@ const CoinPlanHistory = (props: any) => {
       Cell: ({ row }: { row: any }) => (
         <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
           <img
-            src="/images/coin.webp"
+            src={`${basePath}/images/coin.webp`}
             alt="coin"
             width={20}
             height={20}
@@ -402,7 +403,7 @@ const CoinPlanHistory = (props: any) => {
                   Total Income : {" "}
                   <span style={{ color: "green" }}>{totalIncoming}</span>
                   <img
-                    src="/images/coin.webp"
+                    src={`${basePath}/images/coin.webp`}
                     alt="coin"
                     width={20}
                     height={20}
@@ -415,7 +416,7 @@ const CoinPlanHistory = (props: any) => {
                   Total Outgoing : {" "}
                   <span style={{ color: "red" }}>{totalOutGoing}</span>
                   <img
-                    src="/images/coin.webp"
+                    src={`${basePath}/images/coin.webp`}
                     alt="coin"
                     width={20}
                     height={20}

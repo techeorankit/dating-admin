@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import Pagination from "@/extra/Pagination";
@@ -161,7 +162,7 @@ const ReportReason = () => {
             {can("Report Reason", "Create") && (
               <Button
                 className="bg-button p-10 text-white m10-bottom text-nowrap"
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Add Report Reason"
                 onClick={() => {
                   

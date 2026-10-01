@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
@@ -89,7 +90,7 @@ const HostBlock = () => {
                   draggable="false"
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/male.png`;
+                    e.target.src = `${basePath}/images/male.png`;
                   }}
                   style={{
                     borderRadius: "10px",
@@ -143,12 +144,12 @@ const HostBlock = () => {
                       border: "1px solid #ccc",
                     }}
                     onError={(e) => {
-                      e.currentTarget.src = `/images/india.png`;
+                      e.currentTarget.src = `${basePath}/images/india.png`;
                     }}
                   />
                 ) : (
                   <img
-                    src={`/images/india.png`}
+                    src={`${basePath}/images/india.png`}
                     height={30}
                     width={40}
                     alt={`${countryName} Flag`}
@@ -174,7 +175,7 @@ const HostBlock = () => {
       Cell: ({ row }: { row: any }) => (
         <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
           <div style={{ width: "30px" }}>
-            <img src="/images/coin.webp" height={20} width={20} />
+            <img src={`${basePath}/images/coin.webp`} height={20} width={20} />
           </div>
           <div style={{ width: "50px", textAlign: "start" }}>
             <span className="text-capitalize fw-bold">

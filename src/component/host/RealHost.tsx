@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { openDialog } from "@/store/dialogSlice";
@@ -204,7 +205,7 @@ export const RealHost = (props: any) => {
                 style={{ borderRadius: "50px", objectFit: "cover" }} // Styling for better appearance
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
               />
             </div>
@@ -267,7 +268,7 @@ export const RealHost = (props: any) => {
                   }}
                   onError={(e: any) => {
                     e.target.error = null;
-                    e.target.src = `/images/male.png`;
+                    e.target.src = `${basePath}/images/male.png`;
                   }}
                   height={70}
                   width={70}
@@ -329,14 +330,14 @@ export const RealHost = (props: any) => {
             {/* Image Section */}
             <div style={{ width: "60px", textAlign: "center" }}>
               <img
-                src={getImageUrl(row?.userId?.image) || "/images/male.png"}
+                src={getImageUrl(row?.userId?.image) || `${basePath}/images/male.png`}
                 alt="Image"
                 width="60"
                 height="60"
                 style={{ borderRadius: "50px", objectFit: "cover" }} // Styling for better appearance
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
               />
             </div>
@@ -391,7 +392,7 @@ export const RealHost = (props: any) => {
                   src={getImageUrl(flagImageUrl)}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/india.png`;
+                    e.target.src = `${basePath}/images/india.png`;
                   }}
                   height={40}
                   width={40}
@@ -473,7 +474,7 @@ export const RealHost = (props: any) => {
       Header: "Coin",
       Cell: ({ row }: { row: any }) => (
         <div className="d-flex align-items-center justify-content-start gap-2">
-          <img src="/images/coin.webp" alt="Coin" height={20} width={20} />
+          <img src={`${basePath}/images/coin.webp`} alt="Coin" height={20} width={20} />
           <span className="text-capitalize fw-normal">
             {formatCoins(row?.coin)}
           </span>

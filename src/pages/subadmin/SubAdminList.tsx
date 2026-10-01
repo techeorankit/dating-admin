@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import SubAdminDialog from "@/component/subadmin/SubAdminDialog";
 import Button from "@/extra/Button";
@@ -247,7 +248,7 @@ const SubAdminList = () => {
             {can("Staff", "Create") && (
               <Button
                 className={`bg-button p-10 text-white`}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Create Sub Admin"
                 onClick={() => {
                   

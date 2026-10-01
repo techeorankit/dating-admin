@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Analytics from "@/extra/Analytic";
 import Table from "@/extra/Table";
@@ -82,7 +83,7 @@ const Dashboard = () => {
   const dashboardCards = [
     {
       title: "Total Users",
-      icon: "/images/total_user.svg",
+      icon: `${basePath}/images/total_user.svg`,
       amount: dashboard?.dashboardData?.totalUsers,
       link: "/User/User",
       infoTooltip: "Total registered users in the system\nIncludes active and inactive users",
@@ -90,35 +91,35 @@ const Dashboard = () => {
     },
     {
       title: "Total Block User",
-      icon: "/images/total_block_user.svg",
+      icon: `${basePath}/images/total_block_user.svg`,
       amount: dashboard?.dashboardData?.totalBlockedUsers,
       link: "/User/User",
       infoTooltip: "Users who have been blocked\nCannot log in or access features",
     },
     {
       title: "Total VIP User",
-      icon: "/images/total_vip_user.svg",
+      icon: `${basePath}/images/total_vip_user.svg`,
       amount: dashboard?.dashboardData?.totalVipUsers,
       link: "/User/User",
       infoTooltip: "Premium users with VIP access\nEnjoys extra privileges",
     },
     {
       title: "Total Agency",
-      icon: "/images/total_agency.png",
+      icon: `${basePath}/images/total_agency.png`,
       amount: dashboard?.dashboardData?.totalAgency,
       link: "/Agency",
       infoTooltip: "Registered agencies in the system\nManages multiple hosts or users",
     },
     {
       title: "Total Pending Host",
-      icon: "/images/total_pending_host.png",
+      icon: `${basePath}/images/total_pending_host.png`,
       amount: dashboard?.dashboardData?.totalPendingHosts,
       link: "/HostRequest",
       infoTooltip: "Hosts waiting for approval\nPending verification or documents",
     },
     {
       title: "Total Host",
-      icon: "/images/total_host.svg",
+      icon: `${basePath}/images/total_host.svg`,
       amount: dashboard?.dashboardData?.totalHosts,
       link: "/Host",
       infoTooltip: "All approved hosts\nAble to go live and earn revenue",
@@ -126,14 +127,14 @@ const Dashboard = () => {
 
     {
       title: "Total Impressions",
-      icon: "/images/total_impression.svg",
+      icon: `${basePath}/images/total_impression.svg`,
       amount: dashboard?.dashboardData?.totalImpressions,
       link: "/Impression",
       infoTooltip: "Total content impressions\nHow many times content was viewed",
     },
     {
       title: "Total Current Live Host",
-      icon: "/images/total_live_host.svg",
+      icon: `${basePath}/images/total_live_host.svg`,
       amount: dashboard?.dashboardData?.totalCurrentLiveHosts,
       link: "/Host",
       infoTooltip: "Hosts currently streaming live\nActive at this moment",
@@ -145,7 +146,7 @@ const Dashboard = () => {
     {
       title: "Total Revenue",
       subtitle: "Gross payments collected",
-      icon: "/images/admin_commission.svg",
+      icon: `${basePath}/images/admin_commission.svg`,
       amount: dashboard?.dashboardData?.grossPaymentsCollected,
       link: "/PlanHistory",
       currency: defaultCurrency?.symbol,
@@ -154,7 +155,7 @@ const Dashboard = () => {
     {
       title: "Coins Sold",
       subtitle: "Total in-app coins purchased",
-      icon: "/images/host_earnings.svg",
+      icon: `${basePath}/images/host_earnings.svg`,
       amount: dashboard?.dashboardData?.coinsSold,
       // link: "/Coins",
       infoTooltip: "Total coins sold to users.",
@@ -163,7 +164,7 @@ const Dashboard = () => {
     {
       title: "Admin Commission Earned",
       subtitle: "Platform commission income",
-      icon: "/images/host_payouts.svg",
+      icon: `${basePath}/images/host_payouts.svg`,
       amount: dashboard?.dashboardData?.adminCommissionEarned,
       // link: "/Revenue",
       coin: coin,
@@ -172,7 +173,7 @@ const Dashboard = () => {
     {
       title: "Host Earnings Generated",
       subtitle: "Total host income created",
-      icon: "/images/pending_payout.svg",
+      icon: `${basePath}/images/pending_payout.svg`,
       amount: dashboard?.dashboardData?.hostEarningsGenerated,
       // link: "/HostEarnings",
       coin: coin,
@@ -181,7 +182,7 @@ const Dashboard = () => {
     {
       title: "Host Payouts Completed",
       subtitle: "Paid out to hosts",
-      icon: "/images/gross_payments.svg",
+      icon: `${basePath}/images/gross_payments.svg`,
       amount: dashboard?.dashboardData?.hostPayoutsCompleted,
       // link: "/HostPayouts",
       coin: coin,
@@ -190,7 +191,7 @@ const Dashboard = () => {
     {
       title: "Pending Payout Liability",
       subtitle: "Amount yet to be paid",
-      icon: "/images/coins_sold.svg",
+      icon: `${basePath}/images/coins_sold.svg`,
       amount: dashboard?.dashboardData?.pendingPayoutLiability,
       // link: "/HostPayouts",
       coin: coin,
@@ -525,7 +526,7 @@ const DashBox = ({ infoTooltip, dashSVG, title, amount, currency, coin, onClick,
                 {coin && (
                   <Box
                     component="img"
-                    src={`/images/coin.png`}
+                    src={`${basePath}/images/coin.png`}
                     alt="coin"
                     sx={{ width: 20, height: 20 }}
                   />

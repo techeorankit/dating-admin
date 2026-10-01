@@ -1,4 +1,5 @@
 "use client";
+import { basePath } from "@/utils/config";
 
 import React, { useState } from "react";
 import Button from "../extra/Button";
@@ -36,7 +37,7 @@ export default function ForgotPassword() {
         <div className="loginDiv" style={{ width: "100%" }}>
           <div className="loginPage m-auto">
             <div className="loginTitle mb-3  d-flex " style={{ width: "60px" }}>
-              <img src={`/images/logo.png`} width={60} height={60} alt="logo" />
+              <img src={`${basePath}/images/logo.png`} width={60} height={60} alt="logo" />
             </div>
             <div className="fw-bold text-theme  me-auto my-auto welComeTitle">
               Welcome Back

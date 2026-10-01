@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import { DangerRight, Success } from "@/api/toastServices";
 import { apiInstanceFetch } from "@/utils/ApiInstance";
 import { baseURL, key } from "@/utils/config";
@@ -188,7 +189,7 @@ const agencySlice = createSlice({
           setInMemoryCredential(encrypted);
           setTimeout(() => {
 
-            window.location.href = "/DashboardAgency";
+            window.location.href = `${basePath}/DashboardAgency`;
           }, 1000)
         } else {
           DangerRight(action.payload?.data?.message || action?.payload?.message);

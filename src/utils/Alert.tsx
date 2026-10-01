@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Swal from "sweetalert2";
 import { DangerRight } from "../api/toastServices";
 import warningImage from "../assets/images/warningImage.png";
@@ -6,7 +7,7 @@ export const warning = (confirm: any) => {
   return Swal.fire({
     title: "Are you sure?",
     text: "You won't be able to revert this!",
-    iconHtml: `<img src="/images/warningImage.png" style="width: 80px; height: 80px;" alt="Warning">`,
+    iconHtml: `<img src="${basePath}/images/warningImage.png" style="width: 80px; height: 80px;" alt="Warning">`,
     showCancelButton: true,
     confirmButtonText: confirm,
     customClass: {
@@ -66,7 +67,7 @@ export const warningForAccept = (confirm: any) => {
   return Swal.fire({
     title: "Are you sure?",
     text: `You want to accept ${confirm}` ,
-    iconHtml: `<img src="/images/warningImage.png" style="width: 80px; height: 80px;" alt="Warning">`,
+    iconHtml: `<img src="${basePath}/images/warningImage.png" style="width: 80px; height: 80px;" alt="Warning">`,
     showCancelButton: true,
     confirmButtonText: "Accept",
     customClass: {

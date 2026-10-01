@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Navigator from "@/extra/Navigator";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -370,7 +371,7 @@ const Sidebar = () => {
             <div className="sideBarLogo">
               <div className="logo d-flex " style={{ alignItems: "center" }}>
                 <div style={{ width: "50px" }}>
-                  <img src={`/images/logo.png`} width={40} height={40} alt="" />
+                  <img src={`${basePath}/images/logo.png`} width={40} height={40} alt="" />
                 </div>
                 <h3
                   className="cursor text-nowrap  "

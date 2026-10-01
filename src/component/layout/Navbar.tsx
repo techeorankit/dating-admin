@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -86,7 +87,7 @@ const Navbar = () => {
                   style={{ background: "transparent" }}
                 >
                   <img
-                    src={`/images/notification.svg`}
+                    src={`${basePath}/images/notification.svg`}
                     alt=""
                     className="navbarNotifyIcon"
                   />
@@ -100,12 +101,12 @@ const Navbar = () => {
                 <div className="adminPic">
                   <img
                     src={
-                      admin?.image ? baseURL + admin?.image : `/images/male.png`
+                      admin?.image ? baseURL + admin?.image : `${basePath}/images/male.png`
                     }
                     alt=""
                     className="cursor navbarProfileImg"
                     onError={(e) => {
-                      e.currentTarget.src = "/images/male.png";
+                      e.currentTarget.src = `${basePath}/images/male.png`;
                     }}
                   />
                 </div>

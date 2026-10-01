@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import RoleDialog from "@/component/role/RoleDialog";
 import Button from "@/extra/Button";
@@ -220,7 +221,7 @@ const RoleList = () => {
             {can("Role", "Create") && (
               <Button
                 className={`bg-button p-10 text-white`}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Create Role"
                 onClick={() => {
                   

@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { getNewUsers, getTopAgencies, getTopPerformingHost, getTopSpenders } from "@/store/dashboardSlice";
@@ -72,7 +73,7 @@ const TopSpenders = (props: any) => {
                                     }}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/male.png`;
+                                        e.target.src = `${basePath}/images/male.png`;
                                     }}
                                     height={70}
                                     width={70}
@@ -135,7 +136,7 @@ const TopSpenders = (props: any) => {
                                         }}
                                         onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/india.png`;
+                      e.target.src = `${basePath}/images/india.png`;
                     }}
                                     />
                                 </div>
@@ -165,7 +166,7 @@ const TopSpenders = (props: any) => {
             Cell: ({ row }: { row: any }) => (
                 <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
                     <img
-                        src="/images/coin.webp"
+                        src={`${basePath}/images/coin.webp`}
                         alt="coin"
                         width={20}
                         height={20}

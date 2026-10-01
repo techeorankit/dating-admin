@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { getNewUsers } from "@/store/dashboardSlice";
@@ -83,7 +84,7 @@ const GetNewUser = (props: any) => {
                                     src={
                                         row?.image
                                             ? `${row.image}${row?.image?.includes('googleusercontent') ? '?s96' : ''}`
-                                            : `/images/male.png`
+                                            : `${basePath}/images/male.png`
                                     }
                                     alt="Image"
                                     loading="eager"
@@ -96,7 +97,7 @@ const GetNewUser = (props: any) => {
                                     }}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/male.png`;
+                                        e.target.src = `${basePath}/images/male.png`;
                                     }}
                                     height={70}
                                     width={70}
@@ -164,7 +165,7 @@ const GetNewUser = (props: any) => {
                         {flagImageUrl && (
                             <div style={{ width: "70px", textAlign: "end" }}>
                                 <img
-                                    src={flagImageUrl ? flagImageUrl : `/images/india.png`}
+                                    src={flagImageUrl ? flagImageUrl : `${basePath}/images/india.png`}
                                     height={40}
                                     width={40}
                                     alt={`${countryName} Flag`}
@@ -175,7 +176,7 @@ const GetNewUser = (props: any) => {
                                     }}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/india.png`;
+                                        e.target.src = `${basePath}/images/india.png`;
                                     }}
                                 />
                             </div>
@@ -195,7 +196,7 @@ const GetNewUser = (props: any) => {
             Cell: ({ row }: { row: any }) => (
                 <div className="d-flex align-items-center" style={{ gap: "6px" }}>
                     <img
-                        src="/images/coin.webp"
+                        src={`${basePath}/images/coin.webp`}
                         alt="coin"
                         width={20}
                         height={20}

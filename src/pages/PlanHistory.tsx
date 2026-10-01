@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import React from "react";
 import RootLayout from "@/component/layout/Layout";
 import { useEffect, useMemo, useState } from "react";
@@ -117,7 +118,7 @@ const PlanHistory = () => {
                             {/* Image */}
                             <div className="d-flex justify-content-center">
                                 <img
-                                    src={imageUrl || `/images/male.png`}
+                                    src={imageUrl || `${basePath}/images/male.png`}
                                     referrerPolicy="no-referrer"
                                     alt="Image"
                                     loading="eager"
@@ -130,7 +131,7 @@ const PlanHistory = () => {
                                     }}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/male.png`;
+                                        e.target.src = `${basePath}/images/male.png`;
                                     }}
                                 />
                             </div>
@@ -205,7 +206,7 @@ const PlanHistory = () => {
             Cell: ({ row }: { row: any }) => (
                 <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
                     <div style={{ width: "30px" }}>
-                        <img src="/images/coin.webp" height={20} width={20} alt="Coins" />
+                        <img src={`${basePath}/images/coin.webp`} height={20} width={20} alt="Coins" />
                     </div>
                     <div style={{ width: "50px", textAlign: "start" }}>
                         <span className="text-capitalize fw-normal">
@@ -220,7 +221,7 @@ const PlanHistory = () => {
             Cell: ({ row }: { row: any }) => (
                 <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
                     <div style={{ width: "30px" }}>
-                        <img src="/images/coin.webp" height={20} width={20} alt="Coins" />
+                        <img src={`${basePath}/images/coin.webp`} height={20} width={20} alt="Coins" />
                     </div>
                     <div style={{ width: "50px", textAlign: "start" }}>
                         <span className="text-capitalize fw-normal">

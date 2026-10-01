@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import React, { useEffect, useState } from "react";
 import RootLayout from "../../component/layout/Layout";
 import Title from "@/extra/Title";
@@ -182,7 +183,7 @@ const HostInfo = (props: any) => {
                     className="img-fluid"
                     onError={(e: any) => {
                       e.target.onerror = null;
-                      e.target.src = `/images/male.png`;
+                      e.target.src = `${basePath}/images/male.png`;
                     }}
                     width={240}
                     height={260}
@@ -990,7 +991,7 @@ const HostInfo = (props: any) => {
                               }}
                               onError={(e: any) => {
                                 e.target.onerror = null;
-                                e.target.src = `/images/noImg.png`;
+                                e.target.src = `${basePath}/images/noImg.png`;
                               }}
                             />
                           </div>
@@ -1046,12 +1047,12 @@ const HostInfo = (props: any) => {
                                   <img
                                     key={index}
                                     src={
-                                      finalUrl ? getImageUrl(finalUrl) : `/images/noImg.png`
+                                      finalUrl ? getImageUrl(finalUrl) : `${basePath}/images/noImg.png`
                                     }
                                     onError={(e: any) => {
                                       console.log("Image load error:", e);
                                       e.target.onerror = null; // Prevent infinite loop
-                                      e.target.src = `/images/noImg.png`;
+                                      e.target.src = `${basePath}/images/noImg.png`;
                                     }}
                                     className="img-fluid"
                                     width={240}
@@ -1068,7 +1069,7 @@ const HostInfo = (props: any) => {
                                     alt=""
                                     onClick={() => {
                                       setSelectedImage(
-                                        finalUrl ? baseURL + finalUrl : `/images/male.png`
+                                        finalUrl ? baseURL + finalUrl : `${basePath}/images/male.png`
                                       );
                                       setSelectedVideo(null);
                                       setShowModal(true);

@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import { openDialog, openMessageDialog } from "@/store/dialogSlice";
@@ -186,7 +187,7 @@ export const FakeHost = ({ type }: any) => {
                   }}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/male.png`;
+                    e.target.src = `${basePath}/images/male.png`;
                   }}
                   height={70}
                   width={70}

@@ -1,8 +1,9 @@
+import { basePath } from "@/utils/config";
 import { baseURL } from "./config";
 
 export const getImageUrl = (
   path?: string,
-  fallback: string = "/images/male.png"
+  fallback: string = `${basePath}/images/male.png`
 ) => {
   if (!path) return;
 

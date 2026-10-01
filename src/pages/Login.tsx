@@ -1,4 +1,5 @@
 "use client";
+import { basePath } from "@/utils/config";
 import React, { useCallback, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "@/store/store";
@@ -146,7 +147,7 @@ export default function Login() {
       <div className="login-container">
         <div className="image-section">
           <img
-            src={`/images/login2.png`}
+            src={`${basePath}/images/login2.png`}
             alt="Login Visual"
             className="login-visual"
           />
@@ -155,7 +156,7 @@ export default function Login() {
         <div className="form-section d-flex flex-column align-items-center justify-content-center w-50 login-custom-form">
           <div className="" style={{ width: "100%", maxWidth: 487 }}>
             <div className="logologin">
-              <img src={`/images/logo.png`} width={80} height={80} />
+              <img src={`${basePath}/images/logo.png`} width={80} height={80} />
             </div>
 
             {!forgotOpen ? (

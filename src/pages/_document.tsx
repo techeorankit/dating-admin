@@ -1,4 +1,5 @@
 "use client";
+import { basePath } from "@/utils/config";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -8,8 +9,8 @@ export default function Document() {
       <Head>
         <title>Admin</title>
         {/* <link rel="icon" href="/favicon.svg" /> */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/assets/images/logo.png" />
+        <link rel="icon" href={`${basePath}/favicon.ico`} />
+        <link rel="apple-touch-icon" href={`${basePath}/assets/images/logo.png`} />
 
         {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import React, { useEffect, useState } from "react";
 import { allGiftApi, deleteGift } from "../../store/giftSlice";
 import { RootStore, useAppDispatch } from "@/store/store";
@@ -117,7 +118,7 @@ export default function GiftShow() {
             {canCreateGift && (
               <Button
                 className="bg-button p-10 text-white"
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Add Gift"
                 onClick={handleClick}
               />
@@ -243,12 +244,12 @@ export default function GiftShow() {
                               }}
                               onError={(e: any) => {
                                 e.target.error = null;
-                                e.target.src = `/images/emoji.jpeg`;
+                                e.target.src = `${basePath}/images/emoji.jpeg`;
                               }}
                             />
                             <h5 style={{ margin: "20px 0px", fontWeight: "400" }} className="d-flex align-items-center justify-content-center gap-2">
                               <span>{item?.coin}</span>
-                              <img src="/images/coin.webp" alt="Coin" height={22} width={22} />
+                              <img src={`${basePath}/images/coin.webp`} alt="Coin" height={22} width={22} />
                             </h5>
                             <div className="action-button">
                               {(() => {

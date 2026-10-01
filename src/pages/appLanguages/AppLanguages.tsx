@@ -1,4 +1,5 @@
 "use client";
+import { basePath } from "@/utils/config";
 
 import LanguageDialog from "@/component/language/LanguageDialog";
 import LanguageTranslationsDialog from "@/component/language/LanguageTranslationsDialog";
@@ -192,7 +193,7 @@ const AppLanguages = () => {
               style={{ objectFit: "cover" }}
               onError={(e: any) => {
                 e.target.onerror = null;
-                e.target.src = "/images/male.png";
+                e.target.src = `${basePath}/images/male.png`;
               }}
 
             />
@@ -361,7 +362,7 @@ const AppLanguages = () => {
                 <Button
                   className="bg-button p-10 text-white m10-bottom text-nowrap"
                   text="Add Language"
-                  bIcon="/images/bannerImage.png"
+                  bIcon={`${basePath}/images/bannerImage.png`}
                   onClick={() => {
                     
                     dispatch(openDialog({ type: "language" }));
@@ -370,7 +371,7 @@ const AppLanguages = () => {
                 <Button
                   className="bg-button p-10 text-white m10-bottom text-nowrap"
                   text="Upload File"
-                  bIcon="/images/bannerImage.png"
+                  bIcon={`${basePath}/images/bannerImage.png`}
                   onClick={() => {
                     
                     dispatch(openDialog({ type: "uploadTranslationsCsv" }));
@@ -381,7 +382,7 @@ const AppLanguages = () => {
             <Button
               className="bg-button p-10 text-white m10-bottom text-nowrap"
               text="Download File"
-              bIcon="/images/bannerImage.png"
+              bIcon={`${basePath}/images/bannerImage.png`}
               onClick={downloadCsv}
             />
           </div>

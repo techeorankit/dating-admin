@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { getNewUsers, getTopAgencies, getTopPerformingHost } from "@/store/dashboardSlice";
@@ -68,7 +69,7 @@ const TopPerformingAgency = (props: any) => {
                                     width={70}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/male.png`;
+                                        e.target.src = `${basePath}/images/male.png`;
                                     }}
                                 />
                             </div>
@@ -123,7 +124,7 @@ const TopPerformingAgency = (props: any) => {
                                     }}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = `/images/india.png`;
+                                        e.target.src = `${basePath}/images/india.png`;
                                     }}
                                 />
                             </div>

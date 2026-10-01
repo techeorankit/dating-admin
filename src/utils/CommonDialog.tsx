@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import logout from "@/assets/images/logOut.png"
 import deleteIcon from "@/assets/images/delete.svg";
 import acceptIcon from "@/assets/images/accept.svg";
@@ -19,7 +20,7 @@ const CommonDialog = ({ open, onCancel, onConfirm, text }: any) => {
 
 
                             <img
-                                src={text == "Delete" ? `/images/delete.svg` : text=== "Accept" ? `/images/accept.svg` : `/images/logOut.png`}
+                                src={text == "Delete" ? `${basePath}/images/delete.svg` : text=== "Accept" ? `${basePath}/images/accept.svg` : `${basePath}/images/logOut.png`}
                                 height={30}
                                 width={30}
                                 style={{ objectFit: "contain" }}

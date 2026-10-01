@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import { openDialog } from "@/store/dialogSlice";
@@ -169,7 +170,7 @@ const Agency = () => {
                 width={70}
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
               />
             </div>
@@ -264,7 +265,7 @@ const Agency = () => {
                   src={
                     row?.countryFlagImage
                       ? row?.countryFlagImage
-                      : `/images/india.png`
+                      : `${basePath}/images/india.png`
                   }
                   height={40}
                   width={40}
@@ -278,7 +279,7 @@ const Agency = () => {
                   }}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/india.png`;
+                    e.target.src = `${basePath}/images/india.png`;
                   }}
                 />
               </div>
@@ -304,7 +305,7 @@ const Agency = () => {
       Cell: ({ row }: { row: any }) => (
         <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
           <img
-            src="/images/coin.webp"
+            src={`${basePath}/images/coin.webp`}
             alt="coin"
             width={20}
             height={20}
@@ -438,7 +439,7 @@ const Agency = () => {
           {can("Agency", "Create") && (
             <Button
               className={`bg-button p-10 text-white m10-bottom `}
-              bIcon={`/images/bannerImage.png`}
+              bIcon={`${basePath}/images/bannerImage.png`}
               text="Add Agency"
               onClick={() => {
                 // if (agency.length >= 1) {

@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { openDialog } from "@/store/dialogSlice";
@@ -146,7 +147,7 @@ const FakeUser = (props: any) => {
                                 src={getImageUrl(row?.image)}
                                 onError={(e: any) => {
                                     e.target.onerror = null;
-                                    e.target.src = `/images/noImg.png`;
+                                    e.target.src = `${basePath}/images/noImg.png`;
                                 }}
                                 alt="Image"
                                 width="60"
@@ -256,7 +257,7 @@ const FakeUser = (props: any) => {
                         onClick={() => handleOpenAgencyDialog(row)}
                     >
                         <img
-                            src={`/images/agencyImage.svg`}
+                            src={`${basePath}/images/agencyImage.svg`}
                             alt="Agency-Image"
                             height={26}
                             width={26}
@@ -279,7 +280,7 @@ const FakeUser = (props: any) => {
                         }
                     >
                         <img
-                            src={`/images/accept.svg`}
+                            src={`${basePath}/images/accept.svg`}
                             height={24}
                             width={24}
                             alt="Accept"
@@ -290,7 +291,7 @@ const FakeUser = (props: any) => {
                         onClick={() => handleOpenWithdrawDialogue(row)}
                     >
                         <img
-                            src={`/images/decline.svg`}
+                            src={`${basePath}/images/decline.svg`}
                             height={24}
                             width={24}
                             alt="Decline"

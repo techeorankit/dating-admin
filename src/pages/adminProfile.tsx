@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Button from "@/extra/Button";
 import { useSelector } from "react-redux";
 import { RootStore, useAppDispatch } from "@/store/store";
@@ -271,7 +272,7 @@ const AdminProfile = () => {
                         onChange={(e) => handleUploadImage(e)}
                       />
                       <img
-                        src={imagePath ? imagePath : `/images/male.png`}
+                        src={imagePath ? imagePath : `${basePath}/images/male.png`}
                         alt="admin"
                         className="p-1 border adminprofileimg"
                         style={{
@@ -285,7 +286,7 @@ const AdminProfile = () => {
                         }}
                         onClick={() => handlePrevious(imagePath)}
                         onError={(e) => {
-                          e.currentTarget.src = "/images/male.png";
+                          e.currentTarget.src = `${basePath}/images/male.png`;
                         }}
                       />
 

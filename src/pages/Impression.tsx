@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import image from "@/assets/images/bannerImage.png";
 import ImpressionDialog from "@/component/impression/ImpressionDialog";
 import RootLayout from "@/component/layout/Layout";
@@ -197,7 +198,7 @@ const Impression = () => {
             {can("Host Tags", "Create") && (
               <Button
                 className={`bg-button p-10 text-white m10-bottom text-nowrap`}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Add Host Tags"
                 onClick={() => {
                   

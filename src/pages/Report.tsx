@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
@@ -141,10 +142,10 @@ const Report = () => {
           <div className="d-flex px-2 py-1" style={{ width: "250px" }}>
             <div>
               <img
-                src={getImageUrl(imageUrl) || `/images/male.png`}
+                src={getImageUrl(imageUrl) || `${basePath}/images/male.png`}
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
                 referrerPolicy="no-referrer"
                 alt="Reporter"
@@ -198,10 +199,10 @@ const Report = () => {
           <div className="d-flex px-2 py-1" style={{ width: "250px" }}>
             <div>
               <img
-                src={getImageUrl(imageUrl) || `/images/male.png`}
+                src={getImageUrl(imageUrl) || `${basePath}/images/male.png`}
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
                 referrerPolicy="no-referrer"
                 alt="Target"

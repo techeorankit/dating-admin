@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { openDialog } from "@/store/dialogSlice";
@@ -113,14 +114,14 @@ const AcceptedHostRequest = ({ type }: any) => {
           <div className="d-flex justify-content-end align-items-center fw-normal">
             <div style={{ width: "100px", textAlign: "center" }}>
               <img
-                src={getImageUrl(row?.agency?.image) || "/images/male.png"}
+                src={getImageUrl(row?.agency?.image) || `${basePath}/images/male.png`}
                 alt="Image"
                 width="60"
                 height="60"
                 style={{ borderRadius: "50px", objectFit: "cover" }} // Styling for better appearance
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
               />
             </div>
@@ -180,7 +181,7 @@ const AcceptedHostRequest = ({ type }: any) => {
                 height="60"
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
                 style={{ borderRadius: "50px", objectFit: "cover" }} // Styling for better appearance
               />
@@ -243,14 +244,14 @@ const AcceptedHostRequest = ({ type }: any) => {
             {/* Image Section */}
             <div style={{ width: "70px", textAlign: "center" }}>
               <img
-                src={getImageUrl(row?.userId?.image) || "/images/male.png"}
+                src={getImageUrl(row?.userId?.image) || `${basePath}/images/male.png`}
                 alt="Image"
                 width="60"
                 height="60"
                 style={{ borderRadius: "50px", objectFit: "cover" }} // Styling for better appearance
                 onError={(e: any) => {
                   e.target.onerror = null;
-                  e.target.src = `/images/male.png`;
+                  e.target.src = `${basePath}/images/male.png`;
                 }}
               />
             </div>
@@ -343,7 +344,7 @@ const AcceptedHostRequest = ({ type }: any) => {
             {flagImageUrl && (
               <div style={{ width: "70px", textAlign: "end" }}>
                 <img
-                  src={flagImageUrl ? flagImageUrl : `/images/india.png`}
+                  src={flagImageUrl ? flagImageUrl : `${basePath}/images/india.png`}
                   height={40}
                   width={40}
                   alt={`${countryName} Flag`}

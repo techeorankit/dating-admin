@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import image from "@/assets/images/bannerImage.png";
@@ -182,7 +183,7 @@ const DocumentType = () => {
             {can("Setting", "Create") && (
               <Button
                 className={`bg-button p-10 text-white m10-bottom `}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Add Identity Proof"
                 onClick={() => {
                   

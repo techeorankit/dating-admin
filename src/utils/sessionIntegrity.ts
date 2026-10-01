@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import CryptoJS from "crypto-js";
 import { STORAGE_KEYS } from "@/utils/permissions";
 import { setToast } from "@/utils/toastServices";
@@ -211,7 +212,7 @@ export function logoutOnTamperedSession(): void {
   clearAdminPanelSessionStorage();
   setToast("error", "Session tampered. Please login again.");
   setTimeout(() => {
-    window.location.href = "/";
+    window.location.href = `${basePath}/`;
   }, 400);
 }
 

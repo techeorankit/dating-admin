@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Button from "@/extra/Button";
 import image from "@/assets/images/bannerImage.png";
@@ -101,7 +102,7 @@ const CoinPlan = ({ type }: any) => {
                 >
                     <div style={{ width: "30px" }}>
                         <img
-                            src="/images/coin.webp"
+                            src={`${basePath}/images/coin.webp`}
                             height={20}
                             width={20}
                         />
@@ -133,7 +134,7 @@ const CoinPlan = ({ type }: any) => {
             ),
             Cell: ({ row }: { row: any }) => (
                 <div className="d-flex align-items-center justify-content-center gap-2">
-                    <img src="/images/coin.webp" alt="Coin" height={20} width={20} />
+                    <img src={`${basePath}/images/coin.webp`} alt="Coin" height={20} width={20} />
                     <span className="text-capitalize fw-normal">{formatCoins(row?.bonusCoins)}</span>
                 </div>
             ),

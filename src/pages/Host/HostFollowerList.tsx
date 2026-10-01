@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
@@ -81,7 +82,7 @@ const HostFollowerList = () => {
             <div className="d-flex justify-content-center px-2 py-1">
               <div style={{ width: "100px" }}>
                 <img
-                  src={getImageUrl(row?.followerId?.image) || "/images/male.png"}
+                  src={getImageUrl(row?.followerId?.image) || `${basePath}/images/male.png`}
                   alt="Image"
                   loading="eager"
                   draggable="false"
@@ -95,7 +96,7 @@ const HostFollowerList = () => {
                   width={70}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/male.png`;
+                    e.target.src = `${basePath}/images/male.png`;
                   }}
                 />
               </div>
@@ -149,7 +150,7 @@ const HostFollowerList = () => {
                   }}
                   onError={(e: any) => {
                     e.target.onerror = null;
-                    e.target.src = `/images/india.png`;
+                    e.target.src = `${basePath}/images/india.png`;
                   }}
                 />
               </div>
@@ -168,7 +169,7 @@ const HostFollowerList = () => {
         return (
           <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
             <div style={{ width: "30px" }}>
-              <img src="/images/coin.webp" height={20} width={20} />
+              <img src={`${basePath}/images/coin.webp`} height={20} width={20} />
             </div>
             <div style={{ width: "50px", textAlign: "start" }}>
               <span className="text-capitalize fw-bold">

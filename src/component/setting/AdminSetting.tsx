@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import { ExInput, Textarea } from "@/extra/Input";
 import ToggleSwitch from "@/extra/TogggleSwitch";
 import { getDefaultCurrency, getSetting, handleSetting, updateSetting } from "@/store/settingSlice";
@@ -651,7 +652,7 @@ const AdminSetting = () => {
                     <span>
                       Login Bonus Setting{" "}
                       <img
-                        src="/images/coin.webp"
+                        src={`${basePath}/images/coin.webp`}
                         alt="coin"
                         style={{ width: 20, height: 20, verticalAlign: "middle" }}
                       />
@@ -754,7 +755,7 @@ const AdminSetting = () => {
                       <span className="setting-box-label">
                         Random Call Charge{" "}
                         <img
-                          src="/images/coin.webp"
+                          src={`${basePath}/images/coin.webp`}
                           alt="coin"
                           style={{ width: 20, height: 20, verticalAlign: "middle" }}
                         />
@@ -851,7 +852,7 @@ const AdminSetting = () => {
                       <span className="setting-box-label">
                         Private Call Charge{" "}
                         <img
-                          src="/images/coin.webp"
+                          src={`${basePath}/images/coin.webp`}
                           alt="coin"
                           style={{ width: 20, height: 20, verticalAlign: "middle" }}
                         />
@@ -993,7 +994,7 @@ const AdminSetting = () => {
                           <span className="setting-box-label">
                             Chat Interaction Rate{" "}
                             <img
-                              src="/images/coin.webp"
+                              src={`${basePath}/images/coin.webp`}
                               alt="coin"
                               style={{
                                 width: 20,

@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Button from "@/extra/Button";
 import { ExInput } from "@/extra/Input";
 import { closeDialog } from "@/store/dialogSlice";
@@ -265,7 +266,7 @@ const LanguageDialog = ({ onSuccess }: Props) => {
                           }}
                           onError={(e: any) => {
                             e.target.onerror = null;
-                            e.target.src = `/default.jpg`;
+                            e.target.src = `${basePath}/default.jpg`;
                           }}
                         />
                       </div>

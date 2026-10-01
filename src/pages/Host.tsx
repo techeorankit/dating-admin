@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import { FakeHost } from "@/component/host/FakeHost";
 import { RealHost } from "@/component/host/RealHost";
 import RootLayout from "@/component/layout/Layout";
@@ -83,7 +84,7 @@ const Host = () => {
                   <div className="betBox">
                     <Button
                       className={`bg-main p-10 text-white m10-bottom `}
-                      bIcon={`/images/bannerImage.png`}
+                      bIcon={`${basePath}/images/bannerImage.png`}
                       text="Add Male Message"
                       onClick={async () => {
                         const data = await dispatch(getMessage({ gender: 1 }));
@@ -102,7 +103,7 @@ const Host = () => {
                     <Button
                       className={`b p-10 text-white m10-bottom `}
                       style={{ backgroundColor: "#EC4899" }}
-                      bIcon={`/images/bannerImage.png`}
+                      bIcon={`${basePath}/images/bannerImage.png`}
                       text="Add Female Message"
                       onClick={async () => {
                         const data = await dispatch(getMessage({ gender: 2 }));
@@ -120,7 +121,7 @@ const Host = () => {
                   <div className="betBox">
                     <Button
                       className={`bg-button p-10 text-white m10-bottom `}
-                      bIcon={`/images/bannerImage.png`}
+                      bIcon={`${basePath}/images/bannerImage.png`}
                       text="Add Fake Host"
                       onClick={() => {
                         dispatch(openDialog({ type: "fakeHost" }));

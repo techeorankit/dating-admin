@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Button from "@/extra/Button";
 
 import Table from "@/extra/Table";
@@ -497,7 +498,7 @@ const WithdrawSetting = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 new-fake-btn d-flex justify-content-end mt-3 m-sm-0">
               <Button
                 className={`bg-button p-10 text-white  `}
-                bIcon={`/images/bannerImage.png`}
+                bIcon={`${basePath}/images/bannerImage.png`}
                 text="Add"
                 onClick={() => {
                   

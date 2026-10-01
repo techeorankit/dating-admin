@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import Pagination from "@/extra/Pagination";
 import Table from "@/extra/Table";
 import { openDialog } from "@/store/dialogSlice";
@@ -152,7 +153,7 @@ const RealUser = (props: any) => {
                                 src={getImageUrl(row?.image)}
                                 onError={(e: any) => {
                                     e.target.onerror = null;
-                                    e.target.src = `/images/male.png`;
+                                    e.target.src = `${basePath}/images/male.png`;
                                 }}
                                 alt="Image"
                                 height={60}

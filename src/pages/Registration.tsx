@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
@@ -221,7 +222,7 @@ export default function Registration() {
       <div className="login-container">
         <div className="register-image" style={{ width: "50%" }}>
           <img
-            src={`/images/login2.png`}
+            src={`${basePath}/images/login2.png`}
             alt="Login Visual"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -230,7 +231,7 @@ export default function Registration() {
         <div className="d-flex flex-column justify-content-center align-items-center w-50 register-form">
           <div className="">
             <div className="logologin">
-              <img src="/images/logo.png" alt="logo" className="w-100 h-100" />
+              <img src={`${basePath}/images/logo.png`} alt="logo" className="w-100 h-100" />
             </div>
 
             <h2 className="title">SignUp</h2>

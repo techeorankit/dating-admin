@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { RootStore } from "@/store/store";
@@ -65,7 +66,7 @@ const LiveBroadCastHistory = () => {
       Cell: ({ row }: { row: any }) => (
         <div className="d-flex justify-content-center align-items-center" style={{ gap: "6px" }}>
           <img
-            src="/images/coin.webp"
+            src={`${basePath}/images/coin.webp`}
             alt="coin"
             width={20}
             height={20}

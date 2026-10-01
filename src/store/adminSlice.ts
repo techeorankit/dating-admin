@@ -1,4 +1,5 @@
 "use client";
+import { basePath } from "@/utils/config";
 
 import { apiInstance, apiInstanceFetch } from "@/utils/ApiInstance";
 import { jwtDecode } from "jwt-decode";
@@ -279,7 +280,7 @@ const adminSlice = createSlice({
         if (action.payload.status) {
           setToast("success", "Admin Sign Up Successfully");
           setTimeout(() => {
-            window.location.href = "/";
+            window.location.href = `${basePath}/`;
           }, 5000);
         } else {
           setToast("error", action.payload.message);
@@ -336,7 +337,7 @@ const adminSlice = createSlice({
         ).toString();
         setInMemoryCredential(encrypted);
         setTimeout(() => {
-          window.location.href = "/dashboard";
+          window.location.href = `${basePath}/dashboard`;
         }, 500);
         state.isLoading = false;
       } else {
@@ -400,7 +401,7 @@ const adminSlice = createSlice({
           setToast("success", "Admin Profile Update Successful");
           if (prevEmail && updatedEmail && prevEmail !== updatedEmail) {
             setTimeout(() => {
-              window.location.href = "/";
+              window.location.href = `${basePath}/`;
             }, 1000); // Add delay for user to see toast message
           }
         } else {
@@ -431,7 +432,7 @@ const adminSlice = createSlice({
           state.admin = action.payload.data?.data;
           setToast("success", "Admin Password Update Successful");
 
-          window.location.href = "/";
+          window.location.href = `${basePath}/`;
         } else {
           setToast("error", action.payload.data.message);
         }

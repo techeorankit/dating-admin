@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import axios, {
   AxiosInstance,
   AxiosRequestConfig,
@@ -80,7 +81,7 @@ apiInstance.interceptors.response.use(
     }
 
     // if(errorData.error === "jwt expired"){
-    //   window.location.href = "/"
+    //   window.location.href = `${basePath}/`
     // }
 
     if (
@@ -114,7 +115,7 @@ const handleErrors = async (response: Response): Promise<any> => {
       clearAuthToken();
       sessionStorage.removeItem("admin");
       sessionStorage.removeItem("key");
-      window.location.href = "/"; // Redirect to login page
+      window.location.href = `${basePath}/`; // Redirect to login page
     }
     if (data.code === "E_USER_NOT_FOUND" || data.code === "E_UNAUTHORIZED") {
       // Handling authentication errors more gracefully

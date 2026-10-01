@@ -1,3 +1,4 @@
+import { basePath } from "@/utils/config";
 import RootLayout from "@/component/layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { RootStore } from "@/store/store";
@@ -102,10 +103,10 @@ const CoinPlanPurchaseHistory = () => {
                         <div className="d-flex px-2 py-1">
                             <div>
                                 <img
-                                    src={getImageUrl(row?.userDetails?.image) || "/images/male.png"}
+                                    src={getImageUrl(row?.userDetails?.image) || `${basePath}/images/male.png`}
                                     onError={(e: any) => {
                                         e.target.onerror = null;
-                                        e.target.src = '/images/male.png';
+                                        e.target.src = `${basePath}/images/male.png`;
                                     }}
                                     alt="Image"
                                     loading="eager"
@@ -197,7 +198,7 @@ const CoinPlanPurchaseHistory = () => {
             Cell: ({ row }: { row: any }) => (
                 <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
                     <div style={{ width: "30px" }}>
-                        <img src="/images/coin.webp" height={20} width={20} alt="Coins" />
+                        <img src={`${basePath}/images/coin.webp`} height={20} width={20} alt="Coins" />
                     </div>
                     <div style={{ width: "50px", textAlign: "start" }}>
                         <span className="text-capitalize fw-normal">{formatCoins(row?.coin || 0)}</span>
@@ -211,7 +212,7 @@ const CoinPlanPurchaseHistory = () => {
             Cell: ({ row }: { row: any }) => (
                 <div style={{ display: "flex", justifyContent: "center", gap: "5px" }}>
                     <div style={{ width: "30px" }}>
-                        <img src="/images/coin.webp" height={20} width={20} alt="Coins" />
+                        <img src={`${basePath}/images/coin.webp`} height={20} width={20} alt="Coins" />
                     </div>
                     <div style={{ width: "50px", textAlign: "start" }}>
                         <span className="text-capitalize fw-normal">{formatCoins(row?.bonusCoins || 0)}</span>

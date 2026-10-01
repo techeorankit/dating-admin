@@ -1,4 +1,5 @@
 'use client'
+import { basePath } from "@/utils/config";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
@@ -41,7 +42,7 @@ const Header = () => {
           <img
             width={36}
             height={36}
-            src={`/favicon.ico`}
+            src={`${basePath}/favicon.ico`}
             className="w-8 md:w-9"
             alt="logo"
           />
