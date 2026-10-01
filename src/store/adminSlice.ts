@@ -99,12 +99,12 @@ export const signUpAdmin = createAsyncThunk(
 );
 
 export const login = createAsyncThunk(
-  "api/admin/admin/validateAdminLogin",
+  "api/admin/admin/adminLogin",
   async (payload: any) => {
     const token = getAuthToken();
     const uid = getAuthUid() || sessionStorage.getItem("uid");
     return apiInstanceFetch.post(
-      "api/admin/admin/validateAdminLogin",
+      "api/admin/admin/adminLogin",
       payload,
 
       {
